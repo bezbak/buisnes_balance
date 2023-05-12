@@ -185,5 +185,6 @@ bower_components
 psd
 thumb
 sketch
-
+config.py
+/config.py
 # End of https://www.toptal.com/developers/gitignore/api/django,react

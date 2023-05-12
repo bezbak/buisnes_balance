@@ -5,6 +5,7 @@ from .models import Test, Pochta
 from testing.serializers import TestSerializer, PochtaSerializer
 import requests
 import json
+from bb.config import API_KEY
 # Напиши в переменную что будешь искать 
 def chat_ai(find_text):
     url = "https://api.openai.com/v1/chat/completions"
@@ -20,7 +21,7 @@ def chat_ai(find_text):
     "temperature": 0.7
     })
     headers = {
-    'Authorization': 'Bearer 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',
+    'Authorization': f'Bearer {API_KEY}',
     'Content-Type': 'application/json'
     }
     response = requests.request("POST", url, headers=headers, data=payload)
