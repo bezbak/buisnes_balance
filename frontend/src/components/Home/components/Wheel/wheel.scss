@@ -3,13 +3,75 @@
         display: flex;
     }
     &__test{
-        padding: 100px;
-        > .wheel__side{
-            width: 0;
-            height: 0;
-            border-left: 50px solid transparent;
-            border-right: 50px solid transparent;
-            border-bottom: 100px solid red;
+        >img{
+            width: 100%;
+        }
+    }
+    &__text{
+        margin-left: 20px;
+        width: 50%;
+        >h2{
+            color: #ffffff;
+            font-size: 32px;
+            font-family: 'Montserrat',Arial,sans-serif;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        >p{
+            color: #ffffff;
+            font-size: 16px;
+            font-family: 'Montserrat',Arial,sans-serif;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin: 15px 0;
+        }
+        >form{
+            display: flex;
+            flex-direction: column;
+            >input{
+                background-color: transparent;
+                color: white;
+                font-size: 20px;
+                margin: 15px 0;
+                border-bottom: 1px solid #fff;
+                padding-bottom: 5px;
+                &::placeholder{
+                    color: #ffffffb5;
+                }
+                
+            }
+            .required{
+                border: 1px solid red;
+                padding: 5px;
+            }
+            >div{
+                display: flex;
+                align-items: center;
+                font-size: 24px;
+                margin-bottom: 40px;
+                >input{
+                    width: 24px;
+                    height: 24px;
+                }
+                
+            }
+            >button{
+                font-size:20px;
+                font-family: 'Montserrat',Arial,sans-serif;
+                line-height: 1.55;
+                font-weight: 500;
+                width: 100%;
+                color: #fff;
+                cursor: pointer;
+                border-radius: 30px;
+                border: 1px solid #9ba6dd;
+                background-image: linear-gradient(0deg, rgba(179,83,224,1) 0%,rgba(163,202,249,1) 81%);
+                transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+                padding: 20px 0;
+                &:hover{
+                    background-image: linear-gradient(0deg, rgba(179,83,224,0.81) 0%,rgba(163,202,249,0.73) 71%);
+                }
+            }
         }
     }
 }
