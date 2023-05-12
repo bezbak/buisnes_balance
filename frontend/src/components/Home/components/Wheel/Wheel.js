@@ -14,7 +14,7 @@ export default function Wheel() {
     const [testing, setTesting] = useState(true);
     
     const proverka = ()=>{
-        if (name&&phone&&email&&testing) {
+        if (name&&phone&&email) {
             setWindow(!window)
         }
     }
@@ -33,7 +33,7 @@ export default function Wheel() {
                         <input onChange={(e)=>{setPhone(e.target.value)}} type="text" placeholder='Введите номер телефона' required/>
                         <input onChange={(e)=>{setEmail(e.target.value)}} type="email" placeholder='Введите почту' required/>
                         <div className="">
-                            <input onChange={(e)=>{setEmail(e.target.value)}} type="checkbox"/>
+                            <input onChange={(e)=>{setTesting(e.target.value)}} type="checkbox"/>
                             <label htmlFor="">Не хочу заполнять колесо бизнес-баланса</label>
                         </div>
                         <button type='button' onClick={()=>{proverka()}}>ПОЛУЧИТЬ РЕКОМЕНДАЦИЮ БЕСПЛАТНО</button>
