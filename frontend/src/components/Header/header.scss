@@ -1,0 +1,77 @@
+.header{
+    padding-top: 45px ;
+    
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        >a{
+            color: #ffffff;
+            font-size: 46px;
+            font-family: 'Montserrat',Arial,sans-serif;
+            font-weight: 400;
+        }
+    }
+    .burger{
+        width: 50px;
+        height: 30px;
+        background-image: url('../../assets/burger-1.png');
+        background-position: center;
+        background-size: cover;
+        cursor: pointer;
+        &__menu{
+            transform: translateX(200%);
+            transition: transform .8s;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            &--active{
+                transition: all .8s;
+                background-color: #1a274d;
+                transform: translateX(0);
+                height: 100%;
+            }
+        }
+        &__close{
+            width: 40px;
+            height: 40px;
+            display: block;
+            position: absolute;
+            padding: 5px;
+            right: 15px;
+            top: 15px;
+            cursor: pointer;
+            &::before,&::after{
+                position: absolute;
+                display: block;
+                content: "";
+                width: 90%;
+                height: 6%;
+                background-color: #ffffff;
+                bottom: 50%;
+            }
+            &::before{
+                transform: rotate(45deg);
+            }
+            &::after{
+                transform: rotate(-45deg);
+            }
+        }
+        &__nav{
+            padding: 58px 40px 38px;
+            display: flex;
+            flex-direction: column;
+            
+            > a{
+                font-family: 'Montserrat',Arial,sans-serif;
+                font-size: 18px;
+                margin-bottom: 15px;
+                width: 80%;
+                clear: both;
+            }
+        }
+    }
+}
