@@ -1,11 +1,70 @@
+$fontsize:calc( 1vw + 1vh );
+
 .moonParent{
+    padding-right: 1%;
     margin-top: 3%;
     display: flex;
     justify-content: center;
     align-items: center;
+    &__items-btn{
+    width: 100%;
+    font-size: calc($fontsize * 1.3);
+    color: #fff;
+    padding: 1%;
+    margin-top: 3%;
+    font-family: 'Montserrat',Arial,sans-serif;
+    line-height: 1.55;
+    font-weight: 500;
+    border-width: 1px;
+    border-radius: 30px;
+    background-image: linear-gradient(0deg, rgba(167, 46, 223, 0.51) 0%,rgba(78, 153, 244, 0.73) 81%);
+    border-color: #9ba6dd;
+    border-style: solid;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    &:hover{
+        background-image: linear-gradient(0deg, rgba(179,83,224,0.51) 0%,rgba(163,202,249,0.73) 81%);
+
+    }
+}
     &__items{
         width: 50%;
+        &-flex{
+            display: flex;
+            gap: 3vmin;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1 !important;
 
+
+            &-items{
+                display: flex;
+                flex-direction: column;
+                gap: 3vmin;
+                flex-grow: 1 !important;
+
+                &__box{
+                    border-radius: 23px;
+                    text-align: center;
+                    padding: 4%;
+                    height: 15.5vmin;
+                    flex-grow: 1 !important;
+                    border: solid 1px #fafafa;
+                    box-shadow: inset 0px 5px 22px rgba(199, 198, 198, 0.3529411765);
+                    h5{
+                        font-size: calc($fontsize * .7);
+                        font-weight: 100;
+                        padding-bottom:8px;
+                        margin-bottom: 7px;
+                        border-bottom: solid .1px #fafafaa6;
+                    }
+                    h2{
+                        font-size: calc($fontsize * 1.2);
+                        font-weight: 300;
+                    }
+
+                }
+            }
+        }
     }
     &__itemsOne{
         position: relative;
@@ -17,11 +76,161 @@
         img{
             width: 100%;
             position: absolute;
+            z-index: 0;
+            animation: moon 2s linear infinite;
             filter: drop-shadow(0px 0px 11px #ffffff50);
-            transition: all 1s;
-            &:hover{
-                filter: drop-shadow(0px 0px 31px #ffffff93);
+            @keyframes  moon{
+                0%{
+                    filter: drop-shadow(0px 0px 11px #ffffff50);
+                }
+                50%{
+                    filter: drop-shadow(0px 0px 31px #ffffff93);
+                }
+                100%{
+                    filter: drop-shadow(0px 0px 11px #ffffff50);
+                }
             }
         }
+        &-circles{
+            margin-top: 10px;
+            width: 12.5px;
+            height: 12.5px;
+            border: solid 2px #fafafa;
+            background-color: #325b92;
+            border-radius: 100%;
+            box-shadow: 0px 0px 5px 8px #325c929f;
+            position: absolute;
+            div{
+                position: relative;
+            }
+            div::before{
+                content: '';
+                background-color: #fff;
+                width: 10px;
+                height: 10px;
+                display: block;
+                transform: rotate(45deg) translate(-9.5px,-9px );
+
+            }
+            div::after{
+                
+                content: '1';
+                text-align: center;
+                font-weight: 600;
+                display: block;
+                width: 22px;
+                height: 17px;
+                z-index: 2;
+                border-radius: 4px;
+                position: absolute;
+                top: -30px;
+                left: -11px;
+                background-color: #9ab6e0;
+                border: solid 4px;
+                transition: 0s;
+                font-weight: 100;
+            } 
+            div:hover::after{
+                transform: scale(1.5) translateY(-25px);
+                font-size: 11px;
+                width: 130px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 40px;
+                box-shadow: inset 0px 0px 6px #2828285e;
+            }
+            .afters1::after{
+                content: '1';
+            }
+            .afters1:hover::after{
+               
+                content: 'Запуск бизнеса с нуля';
+            }
+            .afters2::after{
+                background-color: orange;
+                content: '2';
+            }
+            .afters2:hover::after{
+                content: 'Машстабирование (франчайзинг)';
+            }
+            .afters3::after{
+                background-color: #0bb4a4;
+                content: '3';
+            }
+            .afters3:hover::after{
+                content: 'Оцировка действующего бизнеса с помощью BI';
+            }
+            .afters4::after{
+                background-color: #b64dbb;
+                content: '4';
+            }
+            .afters4:hover::after{
+                content: 'Готовые решения для бизнеса на территроии ОАЭ';
+            }
+            .afters5::after{
+                background-color: #e36c62;
+                content: '5';
+            }
+            .afters5:hover::after{
+                content: 'Ребрендинг компании в связки с маркетингом';
+            }
+            .afters6::after{
+                background-color: #cd9d54;
+                content: '6';
+            }
+            .afters6:hover::after{
+                content: 'Подбор и ресерч готового бизнеса';
+            }
+            .afters7::after{
+                background-color: #577fed;;
+                content: '7';
+            }
+            .afters7:hover::after{
+                content: 'Консультация и диверсификации бизнеса';
+            }
+            .afters8::after{
+                background-color: #d9bc6e;
+                content: '8';
+            }
+            .afters8:hover::after{
+                content: 'Консультация c полным разбором по личному запросу';
+            }
+                      
+        }
+       
+        .circle1{
+            top: 45.5vmin;
+            left: 25vmin;
+        }
+        .circle2{
+            top: 60vmin;
+            left: 50vmin;
+        }
+        .circle3{
+            top: 20vw;
+            left: 60%;
+        }
+        .circle4{
+            top: 30vmin;
+            left: 80vmin;
+        }
+        .circle5{
+            top: 60vmin;
+            left: 85vmin;
+        }
+        .circle6{
+            top: 33vmin;
+            left: 35vmin;
+        }
+        .circle7{
+            top: 15vmin;
+            left: 60vmin;
+        }
+        .circle8{
+            top: 73vmin;
+            left: 67vmin;
+        }
+        
     }
 }

@@ -10,9 +10,33 @@ const Consultation = () => {
                     <div className="moonParent">
                         <div className="moonParent__items moonParent__itemsOne">
                             <img src={moon} />
+                            <div className="moonParent__itemsOne-circles circle1">
+                                <div className="afters1"></div>
+                            </div>
+                            <div className="moonParent__itemsOne-circles circle2">
+                                <div className="afters2"></div>
+                            </div>
+                            <div className="moonParent__itemsOne-circles circle3">
+                                <div className="afters3"></div>
+                            </div>
+                            <div className="moonParent__itemsOne-circles circle4">
+                                <div className="afters4"></div>
+                            </div>
+                            <div className="moonParent__itemsOne-circles circle5">
+                                <div className="afters5"></div>
+                            </div>
+                            <div className="moonParent__itemsOne-circles circle6">
+                                <div className="afters6"></div>
+                            </div>
+                            <div className="moonParent__itemsOne-circles circle7">
+                                <div className="afters7"></div>
+                            </div>
+                            <div className="moonParent__itemsOne-circles circle8">
+                                <div className="afters8"></div>
+                            </div>
                         </div>
                         <div className="moonParent__items">
-                            <div className="moonParent__items-flex"></div>
+                            <div className="moonParent__items-flex">
                             <div className="moonParent__items-flex-items">
                                 <div className="moonParent__items-flex-items__box">
                                     <h5>Запуск бизнеса с нуля</h5>
@@ -50,6 +74,7 @@ const Consultation = () => {
                                     <h5>Подбор и ресерч готового бизнеса</h5>
                                     <h2>ОТ 80 000 РУБЛЕЙ</h2>
                                 </div>
+                            </div>
                             </div>
                             <button className='moonParent__items-btn' >ЗАПИСАТСЯ НА КОНСУЛЬТАЦИЮ</button>
                         </div>
