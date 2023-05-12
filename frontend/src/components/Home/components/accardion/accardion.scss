@@ -1,0 +1,49 @@
+$fontsize:calc( 1vh + 1vw );
+.titleAccardion{
+    margin-left: 2.5%;
+    font-size: calc($fontsize * 1.6);
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+.carousel{
+    width: 95%;
+    margin: 2% auto;
+    &__inner{
+        border-top: 1px solid #fafafa;
+        border-bottom: 1px solid #fafafa;
+        padding-bottom: 2%;
+        padding-top: 2%;
+        span{
+            padding: 0% 2% 0% 0;
+            height: 6vh;
+            // overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h2{
+                font-weight: 100;
+                font-size: calc($fontsize * 1.1);
+            }
+            h1{
+                font-weight: 100;
+                transition: all .5s;
+            }
+        }
+    }
+}
+.inners1{
+    margin-top: 1%;
+    display: none;
+    transform-origin:bottom ;
+}
+.inners2{
+    margin-top: 1%;
+    display: none;
+    transform-origin:bottom ;
+}
+.inners__active{
+    display: block;
+}
+.plus__active{
+    transform: rotate(45deg);
+}
