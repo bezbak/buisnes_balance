@@ -1,0 +1,27 @@
+.moonParent{
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__items{
+        width: 50%;
+
+    }
+    &__itemsOne{
+        position: relative;
+        background: url(../../../../assets/moon__bacg.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100vmin;
+        img{
+            width: 100%;
+            position: absolute;
+            filter: drop-shadow(0px 0px 11px #ffffff50);
+            transition: all 1s;
+            &:hover{
+                filter: drop-shadow(0px 0px 31px #ffffff93);
+            }
+        }
+    }
+}

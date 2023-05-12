@@ -1,0 +1,89 @@
+*{
+    font-family: sans-serif;
+}
+$fontsize:calc( 1vh + 1vw );
+
+.authorParent{
+    margin-top: 5%;
+    padding: 0 4%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    &__btn{
+    font-size: calc($fontsize * 1.4);
+    color: #fafafa;
+    border-radius: 30px;
+    padding: 20px 0;
+    width: 100%;    
+    margin-top: 3%;
+    background-image: linear-gradient(0deg, rgba(167, 16, 237, 0.51) 0%, rgba(65, 145, 244, 0.73) 81%);
+    border: 1px solid #9ba6dd;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    &:hover{
+        background-image: linear-gradient(0deg, rgba(179, 83, 224, 0.51) 0%, rgba(163, 202, 249, 0.73) 81%);
+    }
+    }
+    @media (max-width:992px) {
+        .authorParent{
+            flex-direction: column !important;
+        }
+    }
+    &__items{
+        position: relative;
+        width: 50%;
+        h2{
+            font-size: calc($fontsize *1.7);
+            white-space: nowrap;
+            font-weight: 500;
+        }h5{
+            font-size: calc($fontsize * .9 );
+            font-weight: 500;
+            white-space: nowrap;
+
+        }
+        img{
+            width: 120%;
+            height: 120%;
+            transform: translate(-5vmin, -15vmin);
+            object-fit: cover;
+        }
+        &-flex{
+            margin-top: 9%;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            gap: 2vw;
+            
+           &-sections{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: stretch;
+            align-items: stretch;
+            gap: 4vmin;
+            &-items{
+                flex-grow: 1;
+                text-align: center;
+                padding: 6.5% 2%;
+                box-shadow: inset 0px 5px 22px #c7c6c65a;
+                border: solid 1px rgb(226, 222, 222);
+                border-radius: 20px;
+
+            }
+           }
+           .sectionOne{
+            width: 60%;
+           }
+           .sectionTwo{
+            flex-shrink: 1;
+           }
+        }
+       
+    }
+    .itemOne{
+        width: 65%;
+       }
+       .itemTwo{
+        width: 35%;
+       }
+}
